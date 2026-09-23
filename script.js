@@ -36,12 +36,33 @@ const logoLight = document.querySelector(".logo-on-light");
 
 const TOTAL = slides.length;
 const SLUGS = slides.map((slide) => slide.id);
+const STAGE_AR = 16 / 9;
 
 let index = 0;
 let scrollingTo = false;
 let lenis = null;
 let snap = null;
 const revealTweens = new WeakMap();
+
+function wrapSlideStages() {
+  slides.forEach((slide) => {
+    if (slide.querySelector(":scope > .slide-stage")) return;
+    const stage = document.createElement("div");
+    stage.className = "slide-stage";
+    while (slide.firstChild) stage.appendChild(slide.firstChild);
+    slide.appendChild(stage);
+  });
+}
+
+function syncStageUnits() {
+  const viewW = window.innerWidth;
+  const viewH = window.innerHeight;
+  const stageW = Math.min(viewW, viewH * STAGE_AR);
+  const stageH = Math.min(viewH, viewW / STAGE_AR);
+  const root = document.documentElement;
+  root.style.setProperty("--vw", `${stageW / 100}px`);
+  root.style.setProperty("--vh", `${stageH / 100}px`);
+}
 
 const CHALLENGE_TOTAL = 6;
 let challengeStep = 1;
@@ -303,7 +324,7 @@ function hideEls(slide) {
   const people = getHeroPeople(slide);
   const doctorsAssets = [...slide.querySelectorAll(".doctors-person, .doctors-phone")];
   const whyVisual = [...slide.querySelectorAll(".why-scene")];
-  const rest = [...slide.querySelectorAll(".hero-visual, .split-visual, .photo-panel, .secure-visual, .hospitals-hero, .cta-visual-wrap, .statement, .site-footer, .cta-banner, .scroll-hint, .btn, .cta-btn, .about-core, .about-aside, .how-aside, .hosp-aside, .ways-aside, .how-path")].filter(
+  const rest = [...slide.querySelectorAll(".hero-visual, .split-visual, .photo-panel, .secure-visual, .hospitals-hero, .cta-visual-wrap, .statement, .site-footer, .cta-banner, .scroll-hint, .btn, .cta-btn, .about-core, .about-aside, .how-aside, .hosp-aside, .ways-aside, .how-path, .welcome-mark, .welcome-sub")].filter(
     (el) =>
       !intro.includes(el) &&
       !cards.includes(el) &&
@@ -741,6 +762,9 @@ function initCursor() {
 }
 
 function boot() {
+  wrapSlideStages();
+  syncStageUnits();
+
   window.setTimeout(() => {
     const leftover = document.getElementById("loader");
     if (leftover) leftover.remove();
@@ -785,6 +809,7 @@ function boot() {
   });
 
   window.addEventListener("resize", () => {
+    syncStageUnits();
     ScrollTrigger.refresh();
     snap?.resize();
     layoutAboutConnectors();

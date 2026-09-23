@@ -23,8 +23,8 @@
     <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
     <link rel="stylesheet" href="/styles.css" />
   </head>
-  <body class="is-light-nav">
-    <a class="skip-link" href="#hero">Skip to content</a>
+  <body class="is-dark-nav">
+    <a class="skip-link" href="#welcome">Skip to content</a>
 
     <div class="grain" aria-hidden="true"></div>
     <div class="cursor" id="cursor" aria-hidden="true"></div>
@@ -52,30 +52,57 @@
       <p class="slide-counter" aria-live="polite">
         <span id="slideCurrent">01</span>
         <span class="counter-sep">/</span>
-        <span>11</span>
+        <span>12</span>
       </p>
     </header>
 
     <nav class="section-nav" id="sectionNav" aria-label="Slide navigation">
-      <button class="nav-dot is-active" data-index="0" aria-label="Hero" title="Hero"></button>
-      <button class="nav-dot" data-index="1" aria-label="Challenges" title="Challenges"></button>
-      <button class="nav-dot" data-index="2" aria-label="What is AlverConnect" title="Platform"></button>
-      <button class="nav-dot" data-index="3" aria-label="How it works" title="How it works"></button>
-      <button class="nav-dot" data-index="4" aria-label="For hospitals" title="Hospitals"></button>
-      <button class="nav-dot" data-index="5" aria-label="For doctors" title="Doctors"></button>
-      <button class="nav-dot" data-index="6" aria-label="Two ways to connect" title="Opportunities"></button>
-      <button class="nav-dot" data-index="7" aria-label="Secure engagements" title="Trust"></button>
-      <button class="nav-dot" data-index="8" aria-label="Why AlverConnect" title="Why"></button>
-      <button class="nav-dot" data-index="9" aria-label="Future-ready healthcare" title="Future"></button>
-      <button class="nav-dot" data-index="10" aria-label="Get started" title="Get started"></button>
+      <button class="nav-dot is-active" data-index="0" aria-label="Welcome" title="Welcome"></button>
+      <button class="nav-dot" data-index="1" aria-label="Hero" title="Hero"></button>
+      <button class="nav-dot" data-index="2" aria-label="Challenges" title="Challenges"></button>
+      <button class="nav-dot" data-index="3" aria-label="What is AlverConnect" title="Platform"></button>
+      <button class="nav-dot" data-index="4" aria-label="How it works" title="How it works"></button>
+      <button class="nav-dot" data-index="5" aria-label="For hospitals" title="Hospitals"></button>
+      <button class="nav-dot" data-index="6" aria-label="For doctors" title="Doctors"></button>
+      <button class="nav-dot" data-index="7" aria-label="Two ways to connect" title="Opportunities"></button>
+      <button class="nav-dot" data-index="8" aria-label="Secure engagements" title="Trust"></button>
+      <button class="nav-dot" data-index="9" aria-label="Why AlverConnect" title="Why"></button>
+      <button class="nav-dot" data-index="10" aria-label="Future-ready healthcare" title="Future"></button>
+      <button class="nav-dot" data-index="11" aria-label="Get started" title="Get started"></button>
     </nav>
 
     <button class="edge-zone edge-prev" id="edgePrev" type="button" aria-label="Previous slide"></button>
     <button class="edge-zone edge-next" id="edgeNext" type="button" aria-label="Next slide"></button>
 
     <main class="deck" id="deck">
-      <!-- 1. HERO -->
-      <section class="slide is-active hero-slide" id="hero" data-index="0" data-theme="light">
+      <!-- 1. WELCOME -->
+      <section class="slide is-active welcome-slide" id="welcome" data-index="0" data-theme="dark">
+        <div class="layer layer-bg"></div>
+        <div class="layer layer-mid" aria-hidden="true">
+          <span class="welcome-orb orb-a"></span>
+          <span class="welcome-orb orb-b"></span>
+          <span class="welcome-orb orb-c"></span>
+        </div>
+        <div class="layer layer-fg">
+          <div class="welcome-layout">
+            <p class="eyebrow reveal-item">HOSPEX 2026</p>
+            <img
+              class="welcome-mark reveal-item"
+              src="/assets/logo/logo-white.png"
+              alt="AlverConnect"
+            />
+            <h1 class="welcome-title mask-title">Welcome</h1>
+            <p class="welcome-sub reveal-item">Connecting Today · Enriched Tomorrow</p>
+          </div>
+          <div class="scroll-hint reveal-item" aria-hidden="true">
+            <span class="mouse"><i></i></span>
+            <span>Scroll to begin</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. HERO -->
+      <section class="slide hero-slide" id="hero" data-index="1" data-theme="light">
         <div class="layer layer-bg"></div>
         <div class="layer layer-mid" aria-hidden="true">
           <span class="hero-leaf leaf-a"></span>
@@ -121,8 +148,8 @@
         </div>
       </section>
 
-      <!-- 2. CHALLENGES -->
-      <section class="slide challenges-slide" id="challenges" data-index="1" data-theme="light">
+      <!-- 3. CHALLENGES -->
+      <section class="slide challenges-slide" id="challenges" data-index="2" data-theme="light">
         <div class="layer layer-bg"></div>
         <div class="layer layer-fg">
           <div class="challenges-layout">
@@ -217,8 +244,8 @@
         </div>
       </section>
 
-      <!-- 3. WHAT IS ALVERCONNECT -->
-      <section class="slide about-slide" id="about" data-index="2" data-theme="light">
+      <!-- 4. WHAT IS ALVERCONNECT -->
+      <section class="slide about-slide" id="about" data-index="3" data-theme="light">
         <div class="layer layer-bg"></div>
         <div class="layer layer-mid" aria-hidden="true">
           <span class="about-leaf"></span>
@@ -305,8 +332,8 @@
         </div>
       </section>
 
-      <!-- 4. HOW IT WORKS -->
-      <section class="slide how-slide" id="how" data-index="3" data-theme="light">
+      <!-- 5. HOW IT WORKS -->
+      <section class="slide how-slide" id="how" data-index="4" data-theme="light">
         <div class="layer layer-bg"></div>
         <div class="layer layer-mid" aria-hidden="true">
           <span class="how-leaf"></span>
@@ -394,8 +421,8 @@
         </div>
       </section>
 
-      <!-- 5. HOSPITALS -->
-      <section class="slide hospitals-slide" id="hospitals" data-index="4" data-theme="light">
+      <!-- 6. HOSPITALS -->
+      <section class="slide hospitals-slide" id="hospitals" data-index="5" data-theme="light">
         <div class="layer layer-bg"></div>
         <div class="layer layer-mid" aria-hidden="true">
           <img class="hosp-bg hosp-bg-building" src="/assets/elements/bg-hospital-building.png" alt="" />
@@ -480,8 +507,8 @@
         </div>
       </section>
 
-      <!-- 6. DOCTORS -->
-      <section class="slide doctors-slide" id="doctors" data-index="5" data-theme="light">
+      <!-- 7. DOCTORS -->
+      <section class="slide doctors-slide" id="doctors" data-index="6" data-theme="light">
         <div class="layer layer-bg"></div>
         <div class="layer layer-mid" aria-hidden="true">
           <span class="doctors-leaf leaf-a"></span>
@@ -567,8 +594,8 @@
         </div>
       </section>
 
-      <!-- 7. TWO WAYS -->
-      <section class="slide ways-slide" id="ways" data-index="6" data-theme="light">
+      <!-- 8. TWO WAYS -->
+      <section class="slide ways-slide" id="ways" data-index="7" data-theme="light">
         <div class="layer layer-bg"></div>
         <div class="layer layer-mid" aria-hidden="true">
           <img class="ways-bg ways-bg-leaves" src="/assets/elements/bg-green-leaves.png" alt="" />
@@ -663,8 +690,8 @@
         </div>
       </section>
 
-      <!-- 8. SECURE -->
-      <section class="slide secure-slide" id="secure" data-index="7" data-theme="light">
+      <!-- 9. SECURE -->
+      <section class="slide secure-slide" id="secure" data-index="8" data-theme="light">
         <div class="layer layer-bg"></div>
         <div class="layer layer-mid" aria-hidden="true">
           <span class="secure-leaf"></span>
@@ -789,8 +816,8 @@
         </div>
       </section>
 
-      <!-- 9. WHY -->
-      <section class="slide why-slide" id="why" data-index="8" data-theme="light">
+      <!-- 10. WHY -->
+      <section class="slide why-slide" id="why" data-index="9" data-theme="light">
         <div class="layer layer-bg"></div>
         <div class="layer layer-mid" aria-hidden="true">
           <span class="why-leaf leaf-a"></span>
@@ -909,8 +936,8 @@
         </div>
       </section>
 
-      <!-- 10. FUTURE -->
-      <section class="slide future-slide" id="future" data-index="9" data-theme="light">
+      <!-- 11. FUTURE -->
+      <section class="slide future-slide" id="future" data-index="10" data-theme="light">
         <div class="layer layer-bg"></div>
         <div class="layer layer-mid" aria-hidden="true">
           <img class="future-bg future-bg-hospital" src="/assets/elements/future-hospital-building.png" alt="" />
@@ -1065,8 +1092,8 @@
         </div>
       </section>
 
-      <!-- 11. CTA -->
-      <section class="slide cta-slide" id="cta" data-index="10" data-theme="light">
+      <!-- 12. CTA -->
+      <section class="slide cta-slide" id="cta" data-index="11" data-theme="light">
         <div class="layer layer-bg"></div>
         <div class="layer layer-mid" aria-hidden="true">
           <span class="cta-blob blob-a"></span>
