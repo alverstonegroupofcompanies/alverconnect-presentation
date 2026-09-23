@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" fill="none">
+  <defs>
+    <linearGradient id="leafFill" x1="300" y1="160" x2="340" y2="230" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#48e447"/>
+      <stop offset="0.45" stop-color="#27b523"/>
+      <stop offset="1" stop-color="#1f529b"/>
+    </linearGradient>
+  </defs>
+  <path d="M140 210H270M370 210H500M320 210V118M320 210v92" stroke="#27b523" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="140" cy="210" r="7" fill="#1f529b"/>
+  <circle cx="500" cy="210" r="7" fill="#1f529b"/>
+  <circle cx="320" cy="118" r="7" fill="#006dbf"/>
+  <circle cx="320" cy="302" r="7" fill="#27b523"/>
+
+  <g transform="translate(88 168)">
+    <rect width="104" height="68" rx="10" fill="#e8f2fb" stroke="#1f529b" stroke-width="2"/>
+    <rect x="38" y="10" width="28" height="22" rx="3" fill="#ffffff" stroke="#1f529b" stroke-width="1.5"/>
+    <path d="M52 14v14M45 21h14" stroke="#27b523" stroke-width="2" stroke-linecap="round"/>
+    <rect x="16" y="40" width="16" height="16" rx="2" fill="#ffffff" stroke="#006dbf"/>
+    <rect x="44" y="40" width="16" height="16" rx="2" fill="#ffffff" stroke="#006dbf"/>
+    <rect x="72" y="40" width="16" height="16" rx="2" fill="#ffffff" stroke="#006dbf"/>
+  </g>
+  <g transform="translate(448 168)">
+    <rect width="104" height="68" rx="10" fill="#e8f2fb" stroke="#1f529b" stroke-width="2"/>
+    <rect x="38" y="10" width="28" height="22" rx="3" fill="#ffffff" stroke="#1f529b" stroke-width="1.5"/>
+    <path d="M52 14v14M45 21h14" stroke="#27b523" stroke-width="2" stroke-linecap="round"/>
+    <rect x="16" y="40" width="16" height="16" rx="2" fill="#ffffff" stroke="#006dbf"/>
+    <rect x="44" y="40" width="16" height="16" rx="2" fill="#ffffff" stroke="#006dbf"/>
+    <rect x="72" y="40" width="16" height="16" rx="2" fill="#ffffff" stroke="#006dbf"/>
+  </g>
+  <g transform="translate(268 52)">
+    <rect width="104" height="68" rx="10" fill="#ffffff" stroke="#27b523" stroke-width="2"/>
+    <rect x="38" y="10" width="28" height="22" rx="3" fill="#f3fff3" stroke="#27b523" stroke-width="1.5"/>
+    <path d="M52 14v14M45 21h14" stroke="#27b523" stroke-width="2" stroke-linecap="round"/>
+    <rect x="16" y="40" width="16" height="16" rx="2" fill="#f3fff3" stroke="#1f529b"/>
+    <rect x="44" y="40" width="16" height="16" rx="2" fill="#f3fff3" stroke="#1f529b"/>
+    <rect x="72" y="40" width="16" height="16" rx="2" fill="#f3fff3" stroke="#1f529b"/>
+  </g>
+  <g transform="translate(268 300)">
+    <rect width="104" height="68" rx="10" fill="#ffffff" stroke="#006dbf" stroke-width="2"/>
+    <rect x="38" y="10" width="28" height="22" rx="3" fill="#eef6ff" stroke="#006dbf" stroke-width="1.5"/>
+    <path d="M52 14v14M45 21h14" stroke="#27b523" stroke-width="2" stroke-linecap="round"/>
+    <rect x="16" y="40" width="16" height="16" rx="2" fill="#eef6ff" stroke="#1f529b"/>
+    <rect x="44" y="40" width="16" height="16" rx="2" fill="#eef6ff" stroke="#1f529b"/>
+    <rect x="72" y="40" width="16" height="16" rx="2" fill="#eef6ff" stroke="#1f529b"/>
+  </g>
+  <circle cx="320" cy="210" r="28" fill="#ffffff" stroke="#27b523" stroke-width="3"/>
+  <path fill="url(#leafFill)" d="M316 192c-6 4-14 16-16 28 8-2 16-10 20-22-1-3-2-5-4-6z"/>
+  <path fill="#27b523" d="M328 193c6 8 10 18 6 28-8-8-12-18-8-26 1-2 1.5-2.4 2-2z"/>
+</svg>
