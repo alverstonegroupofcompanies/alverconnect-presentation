@@ -5,6 +5,10 @@ export default defineConfig({
   server: {
     port: 5173,
     open: true,
+    headers: {
+      // Avoid sticky browser/SW caches while iterating on public assets.
+      "Cache-Control": "no-store",
+    },
   },
   plugins: [
     VitePWA({
@@ -47,11 +51,30 @@ export default defineConfig({
         ],
       },
       workbox: {
-        globPatterns: ["**/*.{js,css,html,ico,png,svg,woff,woff2,jpg,jpeg,webp}"],
+        // Don't precache large slide PNGs — they change often under the same filename.
+        globPatterns: ["**/*.{js,css,html,ico,svg,woff,woff2}"],
         navigateFallback: "/index.html",
+        runtimeCaching: [
+          {
+            urlPattern: ({ url }) => url.pathname.startsWith("/assets/"),
+            handler: "NetworkFirst",
+            options: {
+              cacheName: "alver-assets",
+              networkTimeoutSeconds: 4,
+              expiration: {
+                maxEntries: 120,
+                maxAgeSeconds: 60 * 60 * 24,
+              },
+              cacheableResponse: {
+                statuses: [0, 200],
+              },
+            },
+          },
+        ],
       },
+      // Service worker in dev was serving stale replaced images until hard reload.
       devOptions: {
-        enabled: true,
+        enabled: false,
       },
     }),
   ],

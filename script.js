@@ -6,6 +6,18 @@ import "lenis/dist/lenis.css";
 
 gsap.registerPlugin(ScrollTrigger);
 
+// Clear leftover PWA caches from when the service worker ran in dev.
+if (import.meta.env.DEV && "serviceWorker" in navigator) {
+  navigator.serviceWorker.getRegistrations().then((regs) => {
+    regs.forEach((reg) => reg.unregister());
+  });
+  if ("caches" in window) {
+    caches.keys().then((keys) => {
+      keys.forEach((key) => caches.delete(key));
+    });
+  }
+}
+
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 const isMobile = () => window.matchMedia("(max-width: 768px)").matches;
 
